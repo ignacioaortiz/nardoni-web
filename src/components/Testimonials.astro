@@ -1,0 +1,41 @@
+---
+const references = [
+  {
+    company: "AES – Vientos Neuquinos",
+    description: "Empresa líder en energía eólica de la región."
+  },
+  {
+    company: "PAMPA Energía",
+    description: "Una de las principales empresas energéticas de Argentina."
+  },
+  {
+    company: "Cooperativa CALF",
+    description: "Cooperativa de servicios públicos de Neuquén."
+  }
+];
+---
+
+<section class="py-20 bg-bg-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-text-dark mb-4">
+      Referencias Comerciales
+    </h2>
+    <p class="text-center text-text-light mb-12 max-w-2xl mx-auto">
+      Empresas que confían en nuestros servicios
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {references.map((ref) => (
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+            <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-text-dark mb-2">{ref.company}</h3>
+          <p class="text-text-light">{ref.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

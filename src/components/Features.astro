@@ -1,0 +1,46 @@
+---
+const features = [
+  {
+    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>`,
+    title: "Excelentes Precios",
+    description: "Acceso a proveedores premium para ofrecerte los mejores precios del mercado."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>`,
+    title: "Servicio a Toda Hora",
+    description: "Disponibilidad continua para atender tus necesidades cuando más lo necesites."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+    </svg>`,
+    title: "Expertos Calificados",
+    description: "Profesionales especializados con años de experiencia en el sector automotriz."
+  }
+];
+---
+
+<section class="py-20 bg-bg-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-text-dark mb-4">
+      ¿Por qué elegirnos?
+    </h2>
+    <p class="text-center text-text-light mb-12 max-w-2xl mx-auto">
+      Ofrecemos soluciones integrales con la mejor calidad y atención personalizada
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center">
+          <div class="text-primary mb-4 flex justify-center" set:html={feature.icon} />
+          <h3 class="text-xl font-semibold text-text-dark mb-3">{feature.title}</h3>
+          <p class="text-text-light">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

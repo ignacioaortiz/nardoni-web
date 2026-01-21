@@ -1,0 +1,28 @@
+---
+const brands = [
+  { name: "SKF", logo: "SKF" },
+  { name: "FRAM", logo: "FRAM" },
+  { name: "INA", logo: "INA" },
+  { name: "MAHLE", logo: "MAHLE" },
+  { name: "Bosch", logo: "Bosch" }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-text-dark mb-4">
+      Marcas Asociadas
+    </h2>
+    <p class="text-center text-text-light mb-12 max-w-2xl mx-auto">
+      Trabajamos con las mejores marcas del mercado automotriz
+    </p>
+
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+      {brands.map((brand) => (
+        <div class="flex items-center justify-center bg-bg-light rounded-lg px-8 py-6 min-w-[140px] hover:shadow-md transition-shadow">
+          <span class="text-2xl font-bold text-text-light">{brand.logo}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
