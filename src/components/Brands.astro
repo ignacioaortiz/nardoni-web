@@ -1,10 +1,10 @@
 ---
 const brands = [
-  { name: "SKF", logo: "SKF" },
-  { name: "FRAM", logo: "FRAM" },
-  { name: "INA", logo: "INA" },
-  { name: "MAHLE", logo: "MAHLE" },
-  { name: "Bosch", logo: "Bosch" }
+  { name: "SKF", logo: "/skf-logo.png" },
+  { name: "FRAM", logo: "/from-logo.png" },
+  { name: "INA", logo: "/ina-logo.png" },
+  { name: "MAHLE", logo: "/mahle-logo.png" },
+  { name: "Bosch", logo: "/bosch-logo.png" }
 ];
 ---
 
@@ -17,10 +17,10 @@ const brands = [
       Trabajamos con las mejores marcas del mercado automotriz
     </p>
 
-    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
       {brands.map((brand) => (
-        <div class="flex items-center justify-center bg-bg-light rounded-lg px-8 py-6 min-w-[140px] hover:shadow-md transition-shadow">
-          <span class="text-2xl font-bold text-text-light">{brand.logo}</span>
+        <div class="flex items-center justify-center bg-bg-light rounded-lg px-6 py-4 hover:shadow-md transition-shadow">
+          <img src={brand.logo} alt={brand.name} class="h-12 md:h-16 w-auto object-contain" />
         </div>
       ))}
     </div>

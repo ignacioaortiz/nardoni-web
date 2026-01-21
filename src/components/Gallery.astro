@@ -1,0 +1,31 @@
+---
+const images = [
+  { src: "/foto-1.jpeg", alt: "Nardoni Servicios - Trabajo 1" },
+  { src: "/foto-2.jpeg", alt: "Nardoni Servicios - Trabajo 2" },
+  { src: "/foto-3.jpeg", alt: "Nardoni Servicios - Trabajo 3" },
+];
+---
+
+<section id="trabajos" class="pt-24 pb-32 bg-white scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-text-dark mb-4">
+      Nuestro Trabajo
+    </h2>
+    <p class="text-center text-text-light mb-12 max-w-2xl mx-auto">
+      Calidad y compromiso en cada servicio que realizamos
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {images.map((image) => (
+        <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4]">
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
