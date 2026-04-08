@@ -6,6 +6,13 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      fs: {
+        allow: [
+          '/Users/ignacioaortiz/Documents/dev/nardoni-astro'
+        ]
+      }
+    }
   }
 });
