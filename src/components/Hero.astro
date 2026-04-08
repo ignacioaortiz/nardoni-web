@@ -1,39 +1,72 @@
 ---
 ---
 
-<section id="inicio" class="relative text-white py-32 md:py-44 overflow-hidden">
-  <!-- Imagen de fondo -->
-  <div class="absolute inset-0">
+<section id="inicio" class="relative text-white py-40 md:py-56 overflow-hidden">
+  <!-- Imagen de fondo con blur -->
+  <div class="absolute inset-0 scale-105">
     <img
       src="/foto-0.jpeg"
       alt=""
       class="w-full h-full object-cover"
+      style="filter: blur(3px);"
     />
-    <!-- Overlay más sutil -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30"></div>
   </div>
 
+  <!-- Overlay multicapa: oscurece + tinte navy corporativo -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#0d1b2a]/85 via-[#1a3a5c]/70 to-[#0d1b2a]/80"></div>
+  <!-- Franja inferior opaca para anclar el contenido -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0d1b2a]/60 to-transparent"></div>
+
   <!-- Contenido -->
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 [text-shadow:_0_4px_12px_rgb(0_0_0_/_70%)]">
-      Mecánica General
-    </h1>
-    <p class="text-xl md:text-2xl mb-8 text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
-      ¡Soluciones Integrales para la Reparación de tu Vehículo!
-    </p>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <!-- Badge corporativo -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
+        Neuquén · Cipolletti · Patagonia
+      </div>
 
-    <p class="text-lg text-white italic [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)] mb-10">
-      "¡Comprometidos con hacer el trabajo de forma correcta!"
-    </p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+        Mecánica General<br/>
+        <span class="text-accent/90">de Confianza</span>
+      </h1>
 
-    <a
-      href="#contacto"
-      class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-colors shadow-lg text-lg"
-    >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-      </svg>
-      Contactanos
-    </a>
+      <p class="text-lg md:text-xl mb-4 text-white/85 leading-relaxed max-w-xl" style="text-shadow: 0 2px 10px rgba(0,0,0,0.4);">
+        Soluciones integrales para la reparación de tu vehículo con repuestos de calidad y profesionales certificados.
+      </p>
+
+      <p class="text-base text-white/65 italic mb-10" style="text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+        "Comprometidos con hacer el trabajo de forma correcta, siempre."
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="#contacto"
+          class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-md font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Contactanos
+        </a>
+        <a
+          href="#nosotros"
+          class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white px-8 py-4 rounded-md font-semibold transition-all text-base"
+        >
+          Conocé más
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50">
+    <span class="text-xs uppercase tracking-widest text-white">Scroll</span>
+    <svg class="w-4 h-4 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
   </div>
 </section>
